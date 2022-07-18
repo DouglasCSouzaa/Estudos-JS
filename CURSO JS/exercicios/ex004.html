@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+  <h1>Calculador de notas!</h1> 
+  Digite sua primeira nota <input type="number" name="" id="nota1" > <br><br> <!-- Inserir primeira nota-->
+  Digite sua segunda nota <input type="number" name="" id="nota2" > <br><br>  <!-- Inserir segunda nota-->
+  Digite sua terceira nota <input type="number" name="" id="nota3" > <br><br> <!-- Inserir terceira nota-->
+  <input type="button" name="" id="btncalcular" onclick="calcular()" value="Calcular"> <!-- Botão que vai calcular as notas, ele chama a função calcular-->
+    <script>
+        function calcular(){
+            let n1, n2, n3;
+            let nota11, nota22, nota33;
+            n1 = window.document.getElementById("nota1")
+            n2 = window.document.getElementById('nota2')
+            n3 = window.document.getElementById('nota3')
+            nota11 = Number(n1.value)
+            nota22 = Number(n2.value)
+            nota33 = Number(n3.value)
+            if(nota11 > nota22 && nota22 > nota33)
+            {
+                window.alert(`Sua maior nota foi a primeira com o valor de: ${nota11} `)
+            }
+            else if(nota22 > nota11 && nota22 > nota33)
+            {
+                window.alert(`Sua maior nota foi a segunda com o valor de: ${nota22}`)
+            }
+            else{
+                window.alert(`A sua maior nota foi a terceira com o valor de ${nota33}`)
+            }
+
+        }
+        //SCRIPT || AQUI
+    </script>
+</body>
+</html>

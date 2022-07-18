@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        input {
+            width: 50px;
+            height: 30px;
+            line-height: 2000px;
+        }
+    input#btnn0{
+        width: 160px;
+        height: 150x;
+    }
+        div#visor {
+            font: 30pt Arial;
+            background-color: black;
+            color: white;
+            height: 50px;
+            width: 250px;
+            text-align: right;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="visor"></div>
+    <br><br>
+    <input type="button" value="7" onclick="btn7()" name="btnn7">
+    <input type="button" value="8" onclick="btn8()" name="btnn8">
+    <input type="button" value="9" onclick="btn9()" name="btnn9">
+    <input type="button" value="+" onclick="soma()" name="soma">
+    <br>
+    <br>
+    <input type="button" value="4" onclick="btn4()" name="btnn4">
+    <input type="button" value="5" onclick="btn5()" name="btnn5">
+    <input type="button" value="6" onclick="btn6()" name="btnn6">
+    <br>
+    <br>
+    <input type="button" value="1" onclick="btn1()" name="btnn1">
+    <input type="button" value="2" onclick="btn2()" name="btnn2">
+    <input type="button" value="3" onclick="btn3()" name="btnn3">
+    <br>
+    <br>
+    <input type="button" value="0" onclick="btn0()" name="btnn0" id="btnn0">
+    <script>
+
+        function btn1() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `1`
+
+        }
+        function btn2() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `2`
+        }
+        function btn3() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `3`
+        }
+        function btn4() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `4`
+        }
+        function btn5() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `5`
+        }
+        function btn6() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `6`
+        }
+        function btn7() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `7`
+        }
+        function btn8() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `8`
+        }
+        function btn9() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `9`
+        }
+
+        function btn0() {
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `0`
+        }
+        function soma(){
+            var vissor = window.document.getElementById('visor')
+            vissor.innerHTML += `+`
+            var visortotal = vissor
+            
+        }
+    </script>
+</body>
+
+</html>

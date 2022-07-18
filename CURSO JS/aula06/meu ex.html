@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex001
+    </title>
+    <style> body{ background-color:  rgb(202, 204, 203);
+    color: rgb(0, 0, 0);
+    font: normal 20pt Arial;}
+    
+    h2 {color: rgb(0, 0, 0)};
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!! </h1>
+    <p>Já me livrei da maldição?!</p>
+    <script>/* 
+        var nome = window.prompt("Qual o seu nome?")
+       
+        if( nome == "douglas" ){
+            window.alert("É um grande prazer te conhecer, " + nome +"! Nerdola Master!")
+      
+        }
+        else {
+            window.alert("Eu te desconheço.")
+        }
+        */ var nomes = new Array()
+           var sal = new Array()
+           var idade = new Array()
+       var rep = window.prompt("Quantas pessoas deseja cadastrar")
+       for(var x = 0; x< rep; x++){
+         
+         nomes[x] = window.prompt("Digite o nome do funcionário: ")
+           sal[x] =  window.prompt("Digite o salário do funcionário: ")
+          idade[x] = window.prompt("Digite a idade do funcionário: ")
+       }
+       window.document.write(`Aqui está a lista dos empregados</br>`)
+       for(var x = 0; x< rep; x++){
+           
+           window.document.write (`Nome: ${nomes[x]}, Salário ${sal[x]} e ${idade[x]} anos</br>`)
+       }
+       
+         
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+    <style>
+        input#sal{
+            font: 11pt Arial;
+            text-align: right;
+            background-color: rgb(133, 233, 133);
+            color: black;
+        }
+        input#horas{
+            background-color: rgb(238, 92, 92);
+            color: black;
+            font: 11pt Arial;
+            text-align: right;
+        }
+        input#calcular{
+            width: 200px;
+            height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Salário</h1>
+    Digite o valor da sua hora de trabalho.  <input type="text" value="" name="sal" id="sal">
+    <br>
+    <br>
+    Horas você trabalhou nesse mês.    <input type="text" value="" name="horas" id="horas"> 
+    <br>
+    <input type="button" name="calcular" value="calcular"id="calcular" onclick="calcularr()">
+    <br><br>
+    <div id="res">Resultado</div>
+    <script>
+     function calcularr(){
+         var n1 = window.document.getElementById('sal')
+         var n2 = Number(n1.value)
+         var res = window.document.getElementById('res')
+         var n3 = window.document.getElementById('horas')
+         var n4 = Number(n3.value)
+         var saltotal = (n4*n2)
+         var salliq = (30*saltotal) / 100
+         var salliq2 = saltotal-salliq
+         res.innerText = `Valor da sua hora: ${n2}
+         Horas Trabalhadas no mês: ${n4}
+         Salário Bruto: ${saltotal}
+        Salário líquido(Íncluido desconto INSS): ${salliq2}`
+         
+         
+     }
+    </script>
+</body>
+</html>

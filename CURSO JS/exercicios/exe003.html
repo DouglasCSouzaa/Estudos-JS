@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de notas</title>
+    <style>
+        body{background-color: grey;
+        font: 15pt Arial;
+        }
+     input{text-align: right;}
+     input#btncal{width: 200px;
+        height: 35px;
+        text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <h1>Calcule suas notas</h1>
+    <p>Digite suas notas para saber sua média.</p>
+     Matemática: <input type="text" name="" id="txtmat"><br>
+     Português: <input type="text" name="" id="txtpor"><br>
+     História: <input type="text" name="" id="txthis"><br><br>
+
+     <input type="button" name="" id="btncal" value="Calcular  média" onclick="calcular()">
+     <br>
+     <div id="res"><br>Resultado</div>
+<script>
+    function calcular(){
+    
+        var res = window.document.getElementById('res') //pegando o valor da div
+
+        var txtmat = window.document.getElementById('txtmat') //pegando a informação do campo de texto matematica
+        var valormat = Number(txtmat.value) //pegando o valor do campo de texto matematica
+
+        var txtpor = window.document.getElementById('txtpor') //pegando a informação do campo de texto portugues
+        var valorpor = Number(txtpor.value) //pegando o valor do campo de texto portugues
+
+        var txthis = window.document.getElementById('txthis') 
+        var valorhis = Number(txthis.value)
+
+        var media = (valorhis+valorpor+valormat) / 3
+        
+
+        
+        if( media > 6 ){
+            res.innerText = `A suas notas foram as seguintes: 
+        Matemática ${valormat}
+        Português ${valorpor}
+        História ${valorhis}
+        e sua média foi: ${media.toFixed(2)}
+        Situação final: APROVADO`
+        }
+        if( media < 4 )
+        {
+            res.innerText = `A suas notas foram as seguintes: 
+        Matemática ${valormat}
+        Português ${valorpor}
+        História ${valorhis}
+        e sua média foi: ${media.toFixed(2)}
+        Situação final: REPROVADO`
+        }
+
+        if ((media >= 4) && (media <6))
+        {
+            res.innerText = `A suas notas foram as seguintes: 
+        Matemática ${valormat}
+        Português ${valorpor}
+        História ${valorhis}
+        e sua média foi: ${media.toFixed(2)}
+        Situação final: PROVA FINAL`
+        }
+    }
+    //||
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+var inicio = 4
+var fim = 10
+var passo = 3
+for (var c = inicio;c<fim;c+passo){
+    console.log(`Passo ${c}`)
+}
